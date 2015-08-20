@@ -1,0 +1,41 @@
+\documentclass[11pt]{scrartcl}
+
+%% packages
+\usepackage[utf8]{inputenc}       % Standard for Linux
+%\usepackage[latin1]{inputenc}    % Standard for Windows
+\usepackage{ngerman}              % For German language
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{ifpdf}
+\usepackage{setspace}             % For line spread
+
+% For pdflatex
+\ifpdf
+  % One of these two:
+  \usepackage[pdftex]{graphicx}
+  %\usepackage[pdftex]{epsfig}
+  \usepackage[pdftex]{hyperref}
+% For latex (dvi)
+\else
+  % One of these two:
+  \usepackage[dvips]{graphicx}
+  %\usepackage[dvips]{epsfig}
+  % make the command \href from hyperref available as a 'print only'
+  \newcommand{\href}[2]{#2}
+\fi
+
+%% Picture options
+\graphicspath{{pictures/}}         % Default path to pictures used
+\DeclareGraphicsExtensions{.png}   % More extensions can be added
+
+%% Pagestyle options
+\pagestyle{fancy}
+%\lhead{}
+%\chead{}
+%\rhead{}
+%\lfoot{Nils Lutz}
+%\cfoot{}
+%\rfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\geometry{a4paper,left=3cm,right=3cm}
+%\geometry{a4paper,left=3cm,right=2.5cm}   % Please use these settings for a PhD-thesis
