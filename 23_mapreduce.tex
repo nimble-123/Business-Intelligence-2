@@ -1,4 +1,3 @@
-\newpage
 \subsection{MapReduce Algorithmus}
 MapReduce ist ein von Google Inc. entwickeltes und eingeführtes Programmiermodell. Es wurde speziell zur nebenläufigen Berechnung über große Datenmengen auf Computerclustern entworfen. MapReduce nutzt dabei mehrere Phasen - Map, Shuffle, Reduce - um die Daten zu verarbeiten. Dabei können zwei der Phasen durch den Anwender parametrisiert werden. So lassen sich die Berechnungen parallelisieren und über mehrere Computer verteilen. In einigen Fällen ist eine Parallelisierung alleine durch die großen Datenmengen unumgänglich, da ein einzelner Prozess mit der Verarbeitung überfordert wäre.\\ MapReduce nutzt dafür eine verteilte Speicherung der Daten in Blöcken. Dies sorgt für Datenqualität bei fehlerhaften Schreib- oder Lesevorgängen. Des Weiteren lässt sich MapReduce mit handelsüblichen Computer verwenden. Es ist keine spezielle Server Hardware nötig.(vgl. \cite{wik15})
 
@@ -40,7 +39,7 @@ Wurden alle Ergebnisse der Map Phase gruppiert werden die Paare des Zwischenerge
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{Mapreduce}
+    \includegraphics[width=0.6\linewidth]{Mapreduce}
     \caption{Ausführungsreihenfolge von MapReduce\cite{dg04}}
     \label{fig:mapreduce}
 \end{figure}
