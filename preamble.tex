@@ -8,6 +8,40 @@
 \usepackage{geometry}
 \usepackage{ifpdf}
 \usepackage{setspace}             % For line spread
+\usepackage{color}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+\definecolor{editorGray}{rgb}{1, 1, 1}
+\definecolor{editorOcher}{rgb}{1, 0.5, 0}
+\definecolor{editorGreen}{rgb}{0, 0.5, 0}
+\usepackage{listings}
+\lstset{
+    % Basic design
+    backgroundcolor=\color{editorGray},
+    basicstyle={\footnotesize\ttfamily},   
+    frame=htrbl,
+    captionpos=b,
+    % Line numbers
+    numbers=left,
+    numberstyle=\footnotesize\ttfamily,
+    numbersep=5pt,
+    stepnumber=1,
+    firstnumber=1,
+    numberfirstline=true,
+    % Code design   
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{darkgray}\ttfamily,
+    ndkeywordstyle=\color{editorGreen}\bfseries,
+    stringstyle=\color{editorOcher},
+    % Code
+    language=JAVA,
+    alsodigit={.:;},
+    tabsize=2,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true,
+}
 
 % For pdflatex
 \ifpdf

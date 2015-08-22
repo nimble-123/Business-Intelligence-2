@@ -27,6 +27,8 @@ Die eigentliche Parametrisierung durch den Nutzer wird durch die beiden Funktion
     $Reduce: L \times W^\ast \rightarrow X^\ast$\\$(l, [y_1, \dots, y_{sl}]) \rightarrow [w_1, \dots, w_{ml}]$
 \end{center}
 
+Im Anhang ist eine Beispiel Implementation der MapReduce Funktion zu finden.
+
 \paragraph{Map Phase}$\;$ \\
 Die Daten sind am Anfang partitioniert und repliziert im Hadoop Cluster. Jeder Rechner liest die lokalen Daten zeilenweise als Schlüssel-Wert-Paare und übergibt sie dem $Map$-Task (Implementation der $Map$ Funktion auf einer Maschine). Der Schlüssel dieser Paare ist meistens der Byte-Offset einer Zeile und der Wert ist die Zeile selbst.Die Ausführung der $Map$ Funktion auf jedes gelesene Paar erzeugt ein anderes temporäres Schlüssel-Wert-Paar. Außerdem sortiert der $Map$-Task seine generierten Paare nach Schlüssel und speichert sie temprär lokal. Es folgt eine Umverteilung der kompletten Ausgaben der Map Phase, indem die temporären Paare mit demselben Key aus allen $Map$-Tasks zum selben $Reduce$-Task gesendet werden.
 
