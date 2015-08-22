@@ -10,7 +10,9 @@ public class MongoClient {
   public static void main(String[] args) {
     Mongo mongo;
     try {
-      DBCollection books = new Mongo("localhost", 27017).getDB("library").getCollection("books");
+      mongo = new Mongo("localhost", 27017);
+      DB db = mongo.getDB("library");
+      DBCollection books = db.getCollection("books");
       
       BasicDBObject book = new BasicDBObject();
       book.put("name", "Understanding JAVA");book.put("pages", 100);
